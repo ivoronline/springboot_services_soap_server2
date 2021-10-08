@@ -11,8 +11,12 @@ import org.w3c.dom.Document;
 @RestController
 public class MyController {
 
+  //================================================================================
+  // STRING TO DOCUMENT
+  //================================================================================
   @ResponseBody
-  @RequestMapping(value = "GetPerson")
+  @RequestMapping(value = "GetPerson")                                                 //For SOAPConnection
+  //@RequestMapping(value = "GetPerson", produces = {MediaType.APPLICATION_XML_VALUE}) //For RestTemplate
   String getPerson(@RequestBody String requestSOAP) throws Exception {
 
     //UNMARSHAL REQUEST XML INTO OBJECT
